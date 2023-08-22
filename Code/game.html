@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory Matching Game</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="game_css.css">
+    <script src="game_js.js"></script>
+</head>
+<body onload="clear()">
+	<header>
+		<h1>Memory Matching Game</h1>
+		<p style="font-size: larger">Click on the cards to reveal them. Match all the pairs to win!</p>
+		<div id="levels">
+			<label for="levelchoice">CHOOSE LEVEL:</label>
+			<input type="range" min="1" max="3" value="1" name="levelchoice" id="levelchoice" onchange="select_level()">
+			<label for="levelchoice" id="levelchosen"></label>
+		</div>
+		<div id="scoreboard">
+			<p class="gamedet">Time Left: <span id="timer"></span></p>
+			<p class="gamedet">Score: <span id="score">0</span></p>
+			<p class="gamedet">Level: <span id="level"></span></p>
+		</div>
+	</header>
+	<main>
+		<table id="game_board">
+			<tr>
+				<td><div class="game_tile"><img id="img1" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img2" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			    <td><div class="game_tile"><img id="img3" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img4" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			</tr>
+			<tr>
+				<td><div class="game_tile"><img id="img5" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img6" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img7" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img8" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			</tr>
+			<tr>
+				<td><div class="game_tile"><img id="img9" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img10" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			    <td><div class="game_tile"><img id="img11" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img12" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			</tr>
+			<tr>
+				<td><div class="game_tile"><img id="img13" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img14" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img15" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+				<td><div class="game_tile"><img id="img16" src="images/tile.jpg" height="100px" width="150px" onclick="reveal_card(this.id)"></div></td>
+			</tr>
+		</table>
+		<div class="controls">	
+		   <div id="gameover" style="display:none"></div>
+		   <button id="play_btn" onclick="start_game()">PLAY</button><br>	
+		   <button id="restart_btn" onclick="restartt()">RESTART</button>
+		</div>   
+	</main>
+</body>
+<footer>
+    <p>&copy; Copyrights of the game: K Sowmya<br></p>
+  </footer>
+</html>
